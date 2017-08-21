@@ -1,6 +1,8 @@
-import pogoMap from './pogoMap';
+import {getMap} from './pogoMap';
 import each from './utils/each';
 import hyphenToCamelCase from './utils/hyphenToCamelCase';
+
+const pogoMap = getMap();
 
 /**
  * Gets all `pogo-` classes and either binds events or triggers their initialisation functions by

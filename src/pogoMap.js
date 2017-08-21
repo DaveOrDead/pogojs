@@ -7,7 +7,7 @@ const pogoMap = {};
  * @param {key} type - the event type or 'immediate' to be called on load
  * @param {key} hook - the related `pogo-` class
  */
-export function register(...params) {
+function register(...params) {
     params.map(item => {
         const { hook, type, func } = item;
         if (!pogoMap[hook]) pogoMap[hook] = [];
@@ -15,5 +15,11 @@ export function register(...params) {
     });
 }
 
+function getMap() {
+    return pogoMap;
+}
 
-export default pogoMap;
+export {
+    getMap,
+    register
+};

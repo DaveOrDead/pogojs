@@ -1,7 +1,7 @@
 import hyphenToCamelCase from './hyphenToCamelCase';
 import each from './each';
 
-const getCustomAttributeSet = (el, prefix) => {
+const getCustomAttributeSet = (el, prefix = '') => {
     const attributeSet = {};
     each(el.attributes, attribute => {
         const att = attribute.nodeName.toLowerCase();
