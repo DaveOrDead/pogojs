@@ -6,7 +6,7 @@
   "scripts": {
     "commit": "git-cz",
     "test": "mocha src/index.test.js -w --compilers js:babel-register",
-    "test-single": "mocha src/index.test.js --compilers js:babel-register",
+    "test:single": "mocha src/index.test.js --compilers js:babel-register",
     "build": "babel --out-dir dist src --ignore *.test.js src",
     "prebuild": "rimraf dist",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
