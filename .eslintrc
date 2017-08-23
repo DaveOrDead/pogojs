@@ -1,0 +1,115 @@
+{
+    "extends": "airbnb/base",
+
+    "ecmaFeatures": {
+        "arrowFunctions": true,
+        "binaryLiterals": true,
+        "blockBindings": true,
+        "classes": true,
+        "defaultParams": true,
+        "destructuring": true,
+        "forOf": true,
+        "generators": true,
+        "modules": true,
+        "objectLiteralComputedProperties": true,
+        "objectLiteralDuplicateProperties": true,
+        "objectLiteralShorthandMethods": true,
+        "objectLiteralShorthandProperties": true,
+        "octalLiterals": true,
+        "regexUFlag": true,
+        "regexYFlag": true,
+        "spread": true,
+        "superInFunctions": true,
+        "templateStrings": true,
+        "unicodeCodePointEscapes": true,
+        "globalReturn": true
+    },
+
+    "env": {
+        "browser": true,
+        "jquery": true,
+        "mocha": true
+    },
+
+    "globals": {
+        "f_consume_model": true,
+        "f_get_model": true,
+        "Pogo": true
+    },
+
+    "rules": {
+        // http://eslint.org/docs/rules/array-callback-return
+        "array-callback-return": 0,
+
+        // http://eslint.org/docs/rules/arrow-parens
+        "arrow-parens": [2, "as-needed"],
+
+        // http://eslint.org/docs/rules/no-use-before-define
+        "no-use-before-define": [1, { "functions": true, "classes": true }],
+
+        // http://eslint.org/docs/rules/no-plusplus
+        "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+
+        // http://eslint.org/docs/rules/indent
+        "indent": [
+            2,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+
+        // http://eslint.org/docs/rules/max-len
+        "max-len": [
+            1,
+            100,
+            4,
+            {
+                "ignoreComments": true,
+                "ignoreRegExpLiterals": true,
+                "ignoreStrings": false,
+                "ignoreTemplateLiterals": false
+            }
+        ],
+
+        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+        "import/order": [
+            2,
+            {
+                groups: [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index"
+                ],
+                "newlines-between": "never"
+            }
+        ],
+
+        // http://eslint.org/docs/rules/comma-dangle
+        "comma-dangle": ["error", "never"],
+
+        // http://eslint.org/docs/2.0.0/rules/no-confusing-arrow
+        "no-confusing-arrow": 0,
+
+        // http://eslint.org/docs/rules/quotes
+        quotes: ["error", "single", {
+            avoidEscape: true,
+            allowTemplateLiterals: true
+        }],
+
+        // http://eslint.org/docs/rules/object-curly-spacing
+        "object-curly-spacing": [
+            2,
+            "never"
+        ],
+
+        // http://eslint.org/docs/rules/sort-keys
+        "sort-keys": "error",
+
+        // http://eslint.org/docs/rules/sort-vars
+        "sort-vars": "error"
+    }
+}

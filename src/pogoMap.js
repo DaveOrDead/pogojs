@@ -9,9 +9,9 @@ const pogoMap = {};
  */
 function register(...params) {
     params.map(item => {
-        const { hook, type, func } = item;
+        const {hook, type, func} = item;
         if (!pogoMap[hook]) pogoMap[hook] = [];
-        pogoMap[hook].push({ func, type });
+        pogoMap[hook].push({func, type});
     });
 }
 

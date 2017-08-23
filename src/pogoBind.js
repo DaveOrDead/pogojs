@@ -19,7 +19,7 @@ function pogoBind(context = document) {
             const key = hyphenToCamelCase(hook.slice(5)); // removes `pogo-`
             if (pogoMap[key]) {
                 pogoMap[key].map(item => {
-                    const { type, func } = item;
+                    const {type, func} = item;
                     if (type === 'immediate') {
                         onloadFuncs = [...onloadFuncs, func.bind(null, el, context)];
                     } else {

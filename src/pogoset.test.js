@@ -1,5 +1,8 @@
-const expect = require('chai').expect;
-const pogo = require('./index');
+// Vendor
+import {expect} from 'chai';
+// Utilities
+import {pogoset} from './index';
+
 
 // dummy attributes data
 const set = {
@@ -8,7 +11,7 @@ const set = {
             nodeName: 'pogo-load',
             nodeValue: 'my_file'
         },
-         {
+        {
             nodeName: 'pogo-some-attribute',
             nodeValue: true
         }
@@ -17,7 +20,7 @@ const set = {
 
 
 describe('pogoset', () => {
-    const res = pogo.pogoset(set);
+    const res = pogoset(set);
 
     it('should return an object', () => {
         expect(res).to.be.an('object');

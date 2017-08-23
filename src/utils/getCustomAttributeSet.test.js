@@ -1,5 +1,8 @@
-const expect = require('chai').expect;
+// Vendor
+import {expect} from 'chai';
+// Utilities
 import getCustomAttributeSet from './getCustomAttributeSet';
+
 
 // dummy attributes data
 const set = {
@@ -8,7 +11,7 @@ const set = {
             nodeName: 'pogo-load',
             nodeValue: 'my_file'
         },
-         {
+        {
             nodeName: 'pogo-some-attribute',
             nodeValue: true
         }
@@ -16,7 +19,7 @@ const set = {
 };
 
 
-describe('getCustomAttributeSet', () => {
+describe('Get custom attribute set utility', () => {
     it('should ignore short strings', () => {
         expect(getCustomAttributeSet(set, 'h')).to.be.an('object');
     });
