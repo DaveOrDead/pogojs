@@ -85,3 +85,4 @@ const {id, user, dateOfBirth} = pogoset(el);
 // user === 'johndoe'
 // dateOfBirth === '27-04-1983'
 ```
+

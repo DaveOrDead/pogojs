@@ -1,0 +1,153 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/davidberner/.nvm/versions/node/v7.7.3/bin/node',
+1 verbose cli   '/Users/davidberner/.nvm/versions/node/v7.7.3/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.3
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/davidberner/Documents/repos/pogojs',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/davidberner/.npm/pogojs/0.0.0-development/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/davidberner/.npm correctMkdir not in flight; initializing
+10 info lifecycle pogojs@0.0.0-development~prepublish: pogojs@0.0.0-development
+11 silly lifecycle pogojs@0.0.0-development~prepublish: no script for prepublish, continuing
+12 info lifecycle pogojs@0.0.0-development~prepare: pogojs@0.0.0-development
+13 silly lifecycle pogojs@0.0.0-development~prepare: no script for prepare, continuing
+14 verbose tar pack [ '/Users/davidberner/.npm/pogojs/0.0.0-development/package.tgz',
+14 verbose tar pack   '/Users/davidberner/Documents/repos/pogojs' ]
+15 verbose tarball /Users/davidberner/.npm/pogojs/0.0.0-development/package.tgz
+16 verbose folder /Users/davidberner/Documents/repos/pogojs
+17 verbose addLocalTarball adding from inside cache /Users/davidberner/.npm/pogojs/0.0.0-development/package.tgz
+18 verbose correctMkdir /Users/davidberner/.npm correctMkdir not in flight; initializing
+19 silly cache afterAdd pogojs@0.0.0-development
+20 verbose afterAdd /Users/davidberner/.npm/pogojs/0.0.0-development/package/package.json not in flight; writing
+21 verbose correctMkdir /Users/davidberner/.npm correctMkdir not in flight; initializing
+22 verbose afterAdd /Users/davidberner/.npm/pogojs/0.0.0-development/package/package.json written
+23 silly publish { name: 'pogojs',
+23 silly publish   version: '0.0.0-development',
+23 silly publish   description: 'Library to accompany the Pogo stack',
+23 silly publish   main: 'dist/index.js',
+23 silly publish   scripts:
+23 silly publish    { commit: 'git-cz',
+23 silly publish      'check-coverage': 'nyc check-coverage --statements 50 --functions 50 --branches 50 --lines 50',
+23 silly publish      'report-coverage': 'cat ./coverage/lcov.info | codecov',
+23 silly publish      'watch:test': 'npm t -- -w',
+23 silly publish      test: 'mocha "src/**/*.test.js" --compilers js:babel-register',
+23 silly publish      cover: 'nyc npm t',
+23 silly publish      build: 'npm-run-all --parallel build:*',
+23 silly publish      'build:main': 'babel --out-dir dist src --ignore *.test.js src',
+23 silly publish      'build:umd': 'webpack --output-filename index.umd.js',
+23 silly publish      'build:umd.min': 'webpack --output-filename index.umd.min.js -p',
+23 silly publish      prebuild: 'rimraf dist',
+23 silly publish      'semantic-release': 'semantic-release pre && npm publish && semantic-release post' },
+23 silly publish   repository:
+23 silly publish    { type: 'git',
+23 silly publish      url: 'git+https://github.com/DaveOrDead/pogojs.git' },
+23 silly publish   keywords: [ 'Pogo', 'Pogostack', 'JS' ],
+23 silly publish   files: [ 'dist', 'README.md' ],
+23 silly publish   author:
+23 silly publish    { name: 'David Berner',
+23 silly publish      email: 'davidajberner@gmail.com',
+23 silly publish      url: 'https://davidberner.co.uk/' },
+23 silly publish   license: 'MIT',
+23 silly publish   bugs: { url: 'https://github.com/DaveOrDead/pogojs/issues' },
+23 silly publish   homepage: 'https://github.com/DaveOrDead/pogojs#readme',
+23 silly publish   devDependencies:
+23 silly publish    { 'babel-cli': '6.26.0',
+23 silly publish      'babel-loader': '7.1.2',
+23 silly publish      'babel-preset-es2015': '6.24.1',
+23 silly publish      'babel-preset-stage-2': '6.24.1',
+23 silly publish      'babel-register': '6.26.0',
+23 silly publish      chai: '4.1.1',
+23 silly publish      'chai-spies': '0.7.1',
+23 silly publish      'codecov.io': '0.1.6',
+23 silly publish      commitizen: '2.9.6',
+23 silly publish      'cz-conventional-changelog': '2.0.0',
+23 silly publish      eslint: '4.5.0',
+23 silly publish      'eslint-config-airbnb': '15.1.0',
+23 silly publish      'eslint-plugin-import': '2.7.0',
+23 silly publish      ghooks: '2.0.0',
+23 silly publish      mocha: '3.5.0',
+23 silly publish      'npm-run-all': '4.0.2',
+23 silly publish      nyc: '11.1.0',
+23 silly publish      rimraf: '2.6.1',
+23 silly publish      'semantic-release': '^7.0.2',
+23 silly publish      webpack: '3.5.5' },
+23 silly publish   babel: { presets: [ 'es2015', 'stage-2' ] },
+23 silly publish   czConfig: { path: 'node_modules/cz-conventional-changelog' },
+23 silly publish   config: { ghooks: { 'pre-commit': 'npm run test && npm run check-coverage' } },
+23 silly publish   readme: '# PogoJS\n\n[![travis build](https://img.shields.io/travis/DaveOrDead/pogojs.svg?style=flat-square)](https://travis-ci.org/DaveOrDead/pogojs) [![codecov coverage](https://img.shields.io/codecov/c/github/DaveOrDead/pogojs.svg?style=flat-square)](https://codecov.io/gh/DaveOrDead/pogojs) [![npm](https://img.shields.io/npm/v/pogojs.svg)](https://www.npmjs.com/package/pogojs)\n\nJavaScript microlibrary to accompany [Pogostack](http://www.pogostack.com)\n\nSome Pogo applications rely on partial page refreshes via AJAX.\n\nThis can cause problems with javascript events being bound to the dynamically loaded content. Binding events to the document is one solution but we felt a cleaner way would be to rebind when the partials are loaded in. This library makes this easy to achieve.\n\n\n## Usage\n\n### Register\n\nWe use HTML class hooks to bind events to elements.  Our chosen naming convention is `pogo-`. These classes indicate the JavaScript is attached and have no cosmetics applied. For example, a dropdown component may have the class `pogo-dropdown-menu`.\n\nThe first step is to register these classes with Pogo. In the dropdown component file we would have the following:\n\n#### Example\n```\nregister({\n    func: toggleMenu, // the function to be called\n    hook: \'dropdownMenu\', // the classname in camelcase `pogo-dropdown-menu\n    type: \'click\' // the event type\n});\n```\nMultiple events are added as additional arguments. \n\n#### Example\n```\nregister({\n    func: toggleMenu, // the function to be called\n    hook: \'dropdownMenu\', // the classname in camelcase `pogo-dropdown-menu\n    type: \'click\' // the event type\n}, {\n    func: myNewFunc,\n    hook: \'someHook\',\n    type: \'change\'\n});\n```\nThe `type` key can be any of the standard JS events or a custom `immediate` which will trigger as soon as the partial is loaded.\n\n\n### Bind\n\nOn initial page load, a sweep is done to look for classes beginning `pogo-`.  PogoJS then checks it\'s `register` for any events which are due to be bound to those classes.\n\nThis happens automatically on full page refreshes.\n\nFor partial refreshes you will need to call Pogo\'s `bind` function.\n\n#### Example\n```\nbind(); // this will rebind to all `pogo-` classes on the page\n\n<div id="my_container" ></div>\n\nconst container = document.querySelector(\'#my_container\');\n\nbind(container); // this will excusively bind to `pogo-` classes in the new partial loaded inside the container.\n\n``` \n\n\n### Pogoset\n\nAllows read access, to all the custom pogo attributes (`pogo-*`) set on an HTML element. It returns an object with one entry for each custom pogo attribute.\n\nThis utility behaves in a similar way to the `dataset` property.\n\n* The name of a custom pogo attribute in HTML begins with `pogo-`. It must contain only letters, numbers and the following characters: dash (-), dot (.), colon (:), underscore (_) -- but NOT any ASCII capital letters (A to Z).\n* The name of a custom pogo attribute in Javascript is the name of the same HTML attribute but in camelCase, with the leading `pogo` removed and with no hyp.\n\n\n#### Example\n```\n<div id="user" pogo-id="1234567890" pogo-user="johndoe" pogo-date-of-birth="27-04-1983">John Doe</div>\n\nconst el = document.querySelector(\'#user\');\n\nconst {id, user, dateOfBirth} = pogoset(el);\n\n// id === \'1234567890\'\n// user === \'johndoe\'\n// dateOfBirth === \'27-04-1983\'\n```\n',
+23 silly publish   readmeFilename: 'README.md',
+23 silly publish   gitHead: '35d2d334cbc61b32799eb9e29d9e4d1a4d6368eb',
+23 silly publish   _id: 'pogojs@0.0.0-development',
+23 silly publish   _shasum: 'fc04096a064417bb09b50b2bc358851851b63747',
+23 silly publish   _from: '.' }
+24 info lifecycle pogojs@0.0.0-development~prepublishOnly: pogojs@0.0.0-development
+25 silly lifecycle pogojs@0.0.0-development~prepublishOnly: no script for prepublishOnly, continuing
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name pogojs
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'pogojs',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'pogojs',
+30 silly mapToRegistry   name: 'pogojs',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/pogojs
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/davidberner/.npm/pogojs/0.0.0-development/package.tgz
+34 verbose request uri https://registry.npmjs.org/pogojs
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 11:46:36 AM
+37 verbose request using bearer token for auth
+38 verbose request id 08631a9341480c1c
+39 http request PUT https://registry.npmjs.org/pogojs
+40 http 403 https://registry.npmjs.org/pogojs
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '107',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Wed, 23 Aug 2017 10:46:43 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-lhr6324-LHR',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1503485202.943683,VS0,VE1238',
+41 verbose headers   vary: 'Accept-Encoding, Accept' }
+42 verbose request invalidating /Users/davidberner/.npm/registry.npmjs.org/pogojs on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 0.0.0-development." : pogojs
+44 verbose stack     at makeError (/Users/davidberner/.nvm/versions/node/v7.7.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:304:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/Users/davidberner/.nvm/versions/node/v7.7.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:292:14)
+44 verbose stack     at Request._callback (/Users/davidberner/.nvm/versions/node/v7.7.3/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:212:14)
+44 verbose stack     at Request.self.callback (/Users/davidberner/.nvm/versions/node/v7.7.3/lib/node_modules/npm/node_modules/request/request.js:186:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:194:7)
+44 verbose stack     at Request.<anonymous> (/Users/davidberner/.nvm/versions/node/v7.7.3/lib/node_modules/npm/node_modules/request/request.js:1081:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/Users/davidberner/.nvm/versions/node/v7.7.3/lib/node_modules/npm/node_modules/request/request.js:1001:12)
+45 verbose statusCode 403
+46 verbose pkgid pogojs
+47 verbose cwd /Users/davidberner/Documents/repos/pogojs
+48 error Darwin 16.7.0
+49 error argv "/Users/davidberner/.nvm/versions/node/v7.7.3/bin/node" "/Users/davidberner/.nvm/versions/node/v7.7.3/bin/npm" "publish"
+50 error node v7.7.3
+51 error npm  v4.1.2
+52 error code E403
+53 error "You cannot publish over the previously published version 0.0.0-development." : pogojs
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
