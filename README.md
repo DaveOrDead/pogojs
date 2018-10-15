@@ -86,3 +86,32 @@ const {id, user, dateOfBirth} = pogoset(el);
 // dateOfBirth === '27-04-1983'
 ```
 
+### Streams - Pub/Sub
+
+Streams is the simple Pogo pub / sub model.
+
+#### Subscribe example
+
+To subscribe you need to supply the stream name, the function to call when the stream is triggered and the id of the subscriber.
+
+```
+subscribe(
+    streamName,
+    callback,
+    subscriberId
+);
+```
+
+#### Publish example
+Streams are published when an update is made to the global pogoState store. Anything subscribed to the streams below will have their functions triggered with the parameters provided passed in.
+
+updatePogoState({
+        streamName1: {
+            param1: "hello",
+            param2: "world"
+        },
+        streamName2: {
+            paramY: 4
+        }
+    });
+```
