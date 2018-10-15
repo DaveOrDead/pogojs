@@ -6,7 +6,7 @@
     "scripts": {
         "commit": "git-cz",
         "check-coverage":
-            "nyc check-coverage --statements 50 --functions 50 --branches 35 --lines 50",
+            "nyc check-coverage --statements 50 --functions 50 --branches 30 --lines 50",
         "report-coverage":
             "nyc report --reporter=lcov && cat ./coverage/lcov.info | codecov",
         "watch:test": "npm t -- -w",
